@@ -18,6 +18,6 @@ Tenha instalado GIt e NodeJs;
 
 ```ng serve```
 
-* No navegador estará disponível na porta padrão 8080:
+* No navegador estará disponível na porta padrão 4200:
 
 http://localhost:4200
