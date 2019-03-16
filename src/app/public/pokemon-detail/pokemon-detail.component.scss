@@ -1,0 +1,25 @@
+@import "../../../styles/variables";
+
+.app-box-pokemon-photo {
+    background-color: whitesmoke;
+    margin-right: 20px;
+    border: $borderColor;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+.app-box-pokemon-info {
+    background-color: #30a7d7;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.app-pokemon-photo {
+    max-width: 300px;
+}
+
+.app-badge {
+    font-weight: normal;
+    padding: 10px;
+}

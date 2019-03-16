@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PokemonListItemOptions } from 'src/app/shared/options/pokemon-list-item.options';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  pokemonList = [];
+  pokemonList: PokemonListItemOptions[];
 
   constructor(
     private router: ActivatedRoute

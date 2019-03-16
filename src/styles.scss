@@ -1,5 +1,9 @@
 @import "styles/variables";
 
+body {
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+}
+
 .app-box-border {
     border: $borderColor;
     border-radius: 5px;
