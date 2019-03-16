@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './public/page-not-found/page-not-found.co
 import { CommonModule } from '@angular/common';
 import { PokemonDetailComponent } from './public/pokemon-detail/pokemon-detail.component';
 import { PokemonListComponent } from './public/pokemon-list/pokemon-list.component';
+import { ContactComponent } from './public/contact/contact.component';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'contact', component: ContactComponent },
   {
     path: 'pokemon',
     children: [
