@@ -24,4 +24,8 @@ export class PokemonService {
     const url = this.url + id;
     return this.http.get<PokemonOptions>(url);
   }
+
+  getByUrl(urlPokemon: string) {
+    return this.http.get<PokemonOptions>(urlPokemon);
+  }
 }

@@ -8,7 +8,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    PokemonListItemComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +30,7 @@ import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.
   exports: [
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
   ]
 })
 export class SharedModule { }

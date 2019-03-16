@@ -8,6 +8,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactComponent } from './contact/contact.component';
+import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContactComponent } from './contact/contact.component';
     PokemonListComponent,
     PokemonDetailComponent,
     PageNotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    PokemonListItemComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   exports: [
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PokemonListItemComponent
   ],
 })
 export class PublicModule { }

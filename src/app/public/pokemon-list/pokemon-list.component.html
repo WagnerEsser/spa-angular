@@ -1,7 +1,7 @@
-<ul>
-  <li *ngFor="let pokemon of pokemonList; index as i">
-      <a [routerLink]="['/pokemon', i+1]">
-        {{ pokemon.name }}
-      </a>
-  </li>
-</ul>
+<div class="row">
+  <ul>
+    <li *ngFor="let pokemon of pokemonList;">
+      <app-pokemon-list-item [pokemon]="pokemon"></app-pokemon-list-item>
+    </li>
+  </ul>
+</div>
