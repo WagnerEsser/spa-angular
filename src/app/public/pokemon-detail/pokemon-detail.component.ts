@@ -6,7 +6,7 @@ import { PokemonOptions } from 'src/app/shared/options/pokemon.options';
 @Component({
   selector: 'app-pokemon-detail',
   templateUrl: './pokemon-detail.component.html',
-  styleUrls: ['./pokemon-detail.component.sass']
+  styleUrls: ['./pokemon-detail.component.scss']
 })
 export class PokemonDetailComponent implements OnInit {
   pokemon: PokemonOptions;

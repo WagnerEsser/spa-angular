@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ClickOutsideModule } from 'ng-click-outside';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +19,13 @@ import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+
+    // bootstrap
+    CollapseModule.forRoot(),
+
+    // events
+    ClickOutsideModule,
   ],
   exports: [
     HeaderComponent,
