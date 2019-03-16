@@ -2,6 +2,10 @@
 
 header {
     height: 150px;
-    background-color: rgb(77, 77, 77);
-    color: white;
+    background-color: $backgroundColor;
+}
+
+.app-logo {
+    margin-top: 20px;
+    width: 300px;
 }
