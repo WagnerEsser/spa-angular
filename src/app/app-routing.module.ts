@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { PokemonDetailComponent } from './public/pokemon-detail/pokemon-detail.component';
 import { PokemonListComponent } from './public/pokemon-list/pokemon-list.component';
 import { ContactComponent } from './public/contact/contact.component';
+import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
@@ -21,7 +22,10 @@ const routes: Routes = [
     children: [
       {
         path: 'list',
-        component: PokemonListComponent
+        component: PokemonListComponent,
+        resolve: {
+          pokemonList: PokemonListResolver
+        }
       },
       {
         path: ':id',

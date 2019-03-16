@@ -4,12 +4,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokemonListItemComponent
   ],
   imports: [
     CommonModule,

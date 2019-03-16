@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-list.component.sass']
 })
 export class PokemonListComponent implements OnInit {
+  pokemonList = [];
 
-  constructor() { }
+  // se não existir foto, usar esta
+  photo = '../../../assets/sem-imagem.jpg';
+
+  constructor(
+    private router: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.pokemonList = this.router.snapshot.data.pokemonList.results;
   }
 
 }

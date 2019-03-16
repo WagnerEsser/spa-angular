@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PublicModule } from './public/public.module';
+import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
 
 @NgModule({
   declarations: [
@@ -12,12 +14,13 @@ import { PublicModule } from './public/public.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
 
     SharedModule,
     PublicModule,
   ],
-  providers: [],
+  providers: [PokemonListResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
