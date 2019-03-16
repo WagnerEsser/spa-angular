@@ -10,8 +10,6 @@ import { PokemonService } from 'src/app/shared/services/pokemon.service';
   templateUrl: './pokemon-list-item.component.html',
   styleUrls: ['./pokemon-list-item.component.scss']
 })
-
-
 export class PokemonListItemComponent implements OnInit {
   @Input() pokemon: PokemonListItemOptions;
   @Input() pokemonId: number;
@@ -27,6 +25,9 @@ export class PokemonListItemComponent implements OnInit {
   ngOnInit() {
     this.pokemonService
       .getFromUrl(this.pokemon.url)
-      .subscribe(value => this.resolvedData = value);
+      .subscribe(
+        value => this.resolvedData = value,
+        error => console.log('tratamento de erros...')
+      );
   }
 }

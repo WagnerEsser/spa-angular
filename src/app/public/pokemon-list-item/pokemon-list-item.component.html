@@ -1,16 +1,15 @@
-<div class="row">
-  <div class="col">
-    <a [routerLink]="['/pokemon', pokemonId]">
-      {{ pokemon.name }}
-    </a>
-  </div>
-  <div class="col">
-    <img *ngIf="!resolvedData" [src]="notFound" height="40" style="background-color: #f0f0f0" width="40"
-      class="rounded" />
+<a [routerLink]="['/pokemon', pokemonId]" class="app-link">
+  <div class="app-pokemon-item-list mx-auto text-center">
 
-    <img *ngIf="resolvedData" [src]="resolvedData?.sprites?.front_default" class="rounded" alt="{{ pokemon.name }}"
-      width="40" height="40" />
-  </div>
-</div>
+    <div class="col">
+      <img *ngIf="!resolvedData" [src]="notFound" class="rounded" />
+      <img *ngIf="resolvedData" [src]="resolvedData?.sprites?.front_default" class="rounded" alt="{{ resolvedData.name }}" />
+    </div>
 
-<hr/>
+    <div class="col app-pokemon-description">
+      <span class="text-muted app-text-pokemon-id"># {{ resolvedData.id }}</span>
+      <h4 class="app-title-pokemon">{{ resolvedData.name | titlecase }}</h4>
+    </div>
+
+  </div>
+</a>
