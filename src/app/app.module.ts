@@ -8,8 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PublicModule } from './public/public.module';
-import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
 import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
+import { HomeResolver } from './public/home/home.resolver';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.re
     CollapseModule.forRoot(),
   ],
   providers: [
-    PokemonListResolver,
+    HomeResolver,
     PokemonDetailResolver
   ],
   bootstrap: [AppComponent]

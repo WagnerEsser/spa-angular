@@ -4,6 +4,9 @@
   <p>Peso: {{ pokemon.weight }}</p>
   <p>Altura: {{ pokemon.height }}</p>
   <p>Experiência base: {{ pokemon.base_experience }}</p>
+
+  <img [src]="pokemon.sprites.front_default" class="rounded" alt="{{ pokemon.name }}"
+      width="100" height="100" />
 </div>
 
 <div *ngIf='!pokemon'>

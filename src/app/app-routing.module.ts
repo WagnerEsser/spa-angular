@@ -5,37 +5,27 @@ import { HomeComponent } from './public/home/home.component';
 import { PageNotFoundComponent } from './public/page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
 import { PokemonDetailComponent } from './public/pokemon-detail/pokemon-detail.component';
-import { PokemonListComponent } from './public/pokemon-list/pokemon-list.component';
 import { ContactComponent } from './public/contact/contact.component';
-import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
 import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
+import { HomeResolver } from './public/home/home.resolver';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    resolve: {
+      pokemonList: HomeResolver
+    }
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contact', component: ContactComponent },
   {
-    path: 'pokemon',
-    children: [
-      {
-        path: 'list',
-        component: PokemonListComponent,
-        resolve: {
-          pokemonList: PokemonListResolver
-        }
-      },
-      {
-        path: ':id',
-        component: PokemonDetailComponent,
-        resolve: {
-          pokemon: PokemonDetailResolver
-        }
-      }
-    ]
+    path: 'pokemon/:id',
+    component: PokemonDetailComponent,
+    resolve: {
+      pokemon: PokemonDetailResolver
+    }
   },
   { path: '**', redirectTo: '404' }
 ];

@@ -11,6 +11,9 @@ import { PokemonOptions } from 'src/app/shared/options/pokemon.options';
 export class PokemonDetailComponent implements OnInit {
   pokemon: PokemonOptions;
 
+  // se não existir foto, usar esta
+  notFound = '../../../assets/sem-imagem.jpg';
+
   constructor(
     private router: ActivatedRoute
   ) { }

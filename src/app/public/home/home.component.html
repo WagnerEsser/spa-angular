@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<div class="row">
+  <ul>
+    <div *ngFor="let pokemon of pokemonList; index as i">
+      <app-pokemon-list-item [pokemon]="pokemon" [pokemonId]="i+1"></app-pokemon-list-item>
+    </div>
+  </ul>
+</div>
