@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PublicModule } from './public/public.module';
 import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
+import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver
     SharedModule,
     PublicModule,
   ],
-  providers: [PokemonListResolver],
+  providers: [
+    PokemonListResolver,
+    PokemonDetailResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

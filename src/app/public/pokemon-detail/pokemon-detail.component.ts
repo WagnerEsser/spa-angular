@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { PokemonOptions } from 'src/app/shared/options/pokemon.options';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-detail.component.sass']
 })
 export class PokemonDetailComponent implements OnInit {
+  pokemon: PokemonOptions;
 
-  constructor() { }
+  constructor(
+    private router: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.pokemon = this.router.snapshot.data.pokemon;
   }
 
 }

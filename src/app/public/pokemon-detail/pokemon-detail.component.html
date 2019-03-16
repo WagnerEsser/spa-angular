@@ -1,3 +1,11 @@
-<p>
-  pokemon-detail works!
-</p>
+<div *ngIf='pokemon'>
+  <p>ID: #{{ pokemon.id }}</p>
+  <p>Nome: {{ pokemon.name }}</p>
+  <p>Peso: {{ pokemon.weight }}</p>
+  <p>Altura: {{ pokemon.height }}</p>
+  <p>Experiência base: {{ pokemon.base_experience }}</p>
+</div>
+
+<div *ngIf='!pokemon'>
+  <p class="alert alert-danger">Não foi encontrado pokemón para este ID.</p>
+</div>

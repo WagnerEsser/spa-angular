@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { PokemonListItemOptions } from '../options/pokemon-list-item.options';
+import { PokemonOptions } from '../options/pokemon.options';
 
 
 @Injectable({
@@ -17,5 +18,10 @@ export class PokemonService {
 
   getPokemons(): Observable<PokemonListItemOptions[]> {
     return this.http.get<PokemonListItemOptions[]>(this.url);
+  }
+
+  getById(id: number): Observable<PokemonOptions> {
+    const url = this.url + id;
+    return this.http.get<PokemonOptions>(url);
   }
 }

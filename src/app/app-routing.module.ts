@@ -8,6 +8,7 @@ import { PokemonDetailComponent } from './public/pokemon-detail/pokemon-detail.c
 import { PokemonListComponent } from './public/pokemon-list/pokemon-list.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { PokemonListResolver } from './public/pokemon-list/pokemon-list.resolver';
+import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
@@ -29,7 +30,10 @@ const routes: Routes = [
       },
       {
         path: ':id',
-        component: PokemonDetailComponent
+        component: PokemonDetailComponent,
+        resolve: {
+          pokemon: PokemonDetailResolver
+        }
       }
     ]
   },
