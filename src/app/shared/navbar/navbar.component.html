@@ -14,20 +14,20 @@
 
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/']" (click)="isCollapsed = !isCollapsed">
-            Início
+            <fa name="home"></fa> Início
           </a>
         </li>
 
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/pokemon/list" (click)="isCollapsed = !isCollapsed">
-            Lista de pokemóns
+          Lista de pokemóns
           </a>
         </li>
       </ul>
 
       <ul class="navbar-nav" routerLinkActive="active">
         <a class="nav-link" routerLink="/contact" (click)="isCollapsed = !isCollapsed">
-          Contato
+          <fa name="envelope"></fa> Contato
         </a>
       </ul>
 

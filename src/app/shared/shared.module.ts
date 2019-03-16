@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,7 +22,8 @@ import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.
     CommonModule,
     RouterModule,
 
-    // bootstrap
+    // bootstrap & font-awesome
+    AngularFontAwesomeModule,
     CollapseModule.forRoot(),
 
     // events

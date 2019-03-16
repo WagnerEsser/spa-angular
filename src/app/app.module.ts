@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.re
     SharedModule,
     PublicModule,
 
-    // bootstrap
+    // bootstrap & font-awesome
+    AngularFontAwesomeModule,
     CollapseModule.forRoot(),
   ],
   providers: [
