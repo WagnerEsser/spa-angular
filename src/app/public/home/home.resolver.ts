@@ -3,17 +3,17 @@ import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { PokemonService } from 'src/app/shared/services/pokemon.service';
-import { PokemonListItemOptions } from 'src/app/shared/options/pokemon-list-item.options';
+import { PokemonListOptions } from 'src/app/shared/options/pokemon-list.options';
 
 
 @Injectable()
-export class HomeResolver implements Resolve<Observable<PokemonListItemOptions[]>> {
+export class HomeResolver implements Resolve<Observable<PokemonListOptions[]>> {
 
     constructor(
         private pokemonService: PokemonService
     ) { }
 
-    resolve(): Observable<PokemonListItemOptions[]> {
+    resolve(): Observable<PokemonListOptions[]> {
         return this.pokemonService.getPokemons();
     }
 }

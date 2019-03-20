@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { PokemonListItemOptions } from '../options/pokemon-list-item.options';
+import { PokemonListOptions } from '../options/pokemon-list.options';
 import { PokemonOptions } from '../options/pokemon.options';
 
 
@@ -16,8 +16,8 @@ export class PokemonService {
     private http: HttpClient
   ) { }
 
-  getPokemons(): Observable<PokemonListItemOptions[]> {
-    return this.http.get<PokemonListItemOptions[]>(this.url);
+  getPokemons(): Observable<PokemonListOptions[]> {
+    return this.http.get<PokemonListOptions[]>(this.url);
   }
 
   getById(id: number): Observable<PokemonOptions> {
@@ -25,7 +25,8 @@ export class PokemonService {
     return this.http.get<PokemonOptions>(url);
   }
 
-  getFromUrl(url: string): Observable<PokemonOptions> {
+  getPokemonFromUrl(url: string): Observable<PokemonOptions> {
+    console.log(url);
     return this.http.get<PokemonOptions>(url);
   }
 }
