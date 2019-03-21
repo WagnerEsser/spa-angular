@@ -10,12 +10,9 @@ import { PokemonService } from 'src/app/shared/services/pokemon.service';
   styleUrls: ['./pokemon-list-item.component.scss']
 })
 export class PokemonListItemComponent implements OnInit {
+  resolvedData: PokemonOptions;
   @Input() pokemon: PokemonListItemOptions;
   @Input() pokemonId: number;
-  resolvedData: PokemonOptions;
-
-  // se não existir foto, usar esta
-  notFound = '../../../assets/sem-imagem.jpg';
 
   constructor(
     private pokemonService: PokemonService

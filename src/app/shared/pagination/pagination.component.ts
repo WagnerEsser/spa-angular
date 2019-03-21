@@ -19,6 +19,7 @@ export class PaginationComponent implements OnInit {
   ngOnInit() {
     this.pokemonService.getPokemons().subscribe(
       resposta => {
+        console.log("Pagination: ");
         console.log(resposta);
         // this.anterior = resposta.next;
         // this.proximo = resposta.next;

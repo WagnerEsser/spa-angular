@@ -26,7 +26,6 @@ export class PokemonService {
   }
 
   getPokemonFromUrl(url: string): Observable<PokemonOptions> {
-    console.log(url);
     return this.http.get<PokemonOptions>(url);
   }
 }
