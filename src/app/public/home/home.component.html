@@ -1,6 +1,10 @@
 <div class="row pt-4 pb-4">
-  <div *ngFor="let pokemon of pokemonList; index as i" class="col">
+  <div *ngFor="let pokemon of pokemonList.results; index as i" class="col">
     <app-pokemon-list-item [pokemon]="pokemon" [pokemonId]="i+1"></app-pokemon-list-item>
     <hr />
   </div>
+</div>
+
+<div class="row">
+  <app-pagination class="mx-auto" [pokemonList]="pokemonList"></app-pagination>
 </div>

@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
+    PaginationComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
+    PaginationComponent,
   ]
 })
 export class SharedModule { }
