@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
+import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { PokemonService } from 'src/app/shared/services/pokemon.service';
@@ -13,7 +13,7 @@ export class HomeResolver implements Resolve<Observable<PokemonListOptions[]>> {
         private pokemonService: PokemonService
     ) { }
 
-    resolve(route: ActivatedRouteSnapshot): Observable<PokemonListOptions[]> {
-        return this.pokemonService.getPokemons(route.params.page);
+    resolve(): Observable<PokemonListOptions[]> {
+        return this.pokemonService.getPokemons();
     }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonListOptions } from 'src/app/shared/options/pokemon-list.options';
-import { PaginationOptions } from 'src/app/shared/options/pagination.options';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +9,6 @@ import { PaginationOptions } from 'src/app/shared/options/pagination.options';
 })
 export class HomeComponent implements OnInit {
   pokemonList: PokemonListOptions[];
-  pagination: PaginationOptions = {
-    nextPage: undefined,
-    previousPage: undefined
-  };
 
   constructor(
     private router: ActivatedRoute
