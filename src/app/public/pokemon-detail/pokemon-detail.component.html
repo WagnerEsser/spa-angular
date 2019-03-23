@@ -12,9 +12,11 @@
 <div class="container">
   <div class="row" *ngIf='pokemon'>
 
-    <div class="col app-box-pokemon-photo mb-5">
-      <!-- <img [src]="pokemon.sprites.front_default" class="rounded app-pokemon-photo" alt="{{ pokemon.name }}" /> -->
-      <img [src]="photo" class="rounded app-pokemon-photo" alt="{{ pokemon.name }}" />
+    <div class="col app-box-pokemon-photo mb-5 mr-4 p-4">
+      <span *ngFor="let photo of pokemon.sprites | keyvalue">
+        <img *ngIf="photo.value" [src]="photo.value" class="rounded app-pokemon-photo p-2 m-2"
+              alt="{{ pokemon.name }}" />
+      </span>
     </div>
 
     <div class="col app-box-pokemon-info mb-5">

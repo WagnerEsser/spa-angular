@@ -2,11 +2,14 @@
 
 .app-box-pokemon-photo {
     background-color: whitesmoke;
-    margin-right: 20px;
     border: $borderColor;
     border-radius: 20px;
-    padding: 25px;
     text-align: center;
+
+    * img {
+        background-color: rgb(233, 233, 233);
+        border: $borderColor;
+    }
 }
 
 .app-box-pokemon-info {
