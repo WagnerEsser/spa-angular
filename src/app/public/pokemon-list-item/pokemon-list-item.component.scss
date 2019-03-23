@@ -39,19 +39,3 @@
 .app-pokemon-photo {
     max-width: 100%;
 }
-
-.app-favorite {
-    cursor: pointer;
-    color: gray;
-    transition: color 0.2s;
-
-    &:hover {
-        color: #ffd310;
-        text-shadow: 0px 0px 3px black;
-    }
-}
-
-.app-favorite-selected {
-    color: #ffd310;
-    text-shadow: 0px 0px 3px black;
-}

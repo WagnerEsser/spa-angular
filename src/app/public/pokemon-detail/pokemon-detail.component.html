@@ -4,8 +4,11 @@
     <h2 class="mx-auto mt-3 mb-5">
       {{ pokemon.name | titlecase }}
       <span class="text-muted"># {{ pokemon.id }}</span>
+
+      <app-favorite [pokemonId]="pokemon.id" class="ml-3"></app-favorite>
     </h2>
   </div>
+
 
 </div>
 

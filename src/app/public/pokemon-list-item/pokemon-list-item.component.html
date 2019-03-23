@@ -1,8 +1,7 @@
 <div class="app-pokemon-item-list mx-auto text-center">
 
-  <fa name="star" class="fa-lg app-favorite" [ngClass]="{'app-favorite-selected': pokemonFavorite}"
-      (click)="favorite(resolvedData?.id)"></fa>
-
+  <app-favorite [pokemonId]="pokemonId"></app-favorite>
+  
   <div class="col">
     <a [routerLink]="['/pokemon', pokemonId]" class="app-link">
       <fa *ngIf="!resolvedData?.sprites?.front_default" name="spinner fa-4x mb-4 fa-spin" class="text-muted"></fa>

@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactComponent } from './contact/contact.component';
 import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     PokemonDetailComponent,
     PageNotFoundComponent,
     ContactComponent,
-    PokemonListItemComponent
+    PokemonListItemComponent,
+    FavoriteComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { SharedModule } from '../shared/shared.module';
   exports: [
     HomeComponent,
     PageNotFoundComponent,
-    PokemonListItemComponent
+    PokemonListItemComponent,
+    FavoriteComponent
   ],
 })
 export class PublicModule { }
