@@ -5,18 +5,17 @@ export interface PokemonOptions {
     weight: string;
     height: string;
     base_experience: number;
+    abilities: AbilitiesList[];
     sprites: SpriteDetail;
-    stats: StatsDetail[];
 }
 
+interface AbilitiesList {
+    ability: AbilityDetail;
+}
+
+interface AbilityDetail {
+    name: string;
+}
 interface SpriteDetail {
     front_default: string;
-}
-
-interface StatsDetail {
-    stat: StatDetail;
-}
-
-interface StatDetail {
-    name: string;
 }
