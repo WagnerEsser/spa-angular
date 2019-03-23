@@ -23,6 +23,7 @@ export class PokemonDetailComponent implements OnInit {
 
   ngOnInit() {
     this.pokemon = this.router.snapshot.data.pokemon;
+    console.log(this.pokemon);
   }
 
 }

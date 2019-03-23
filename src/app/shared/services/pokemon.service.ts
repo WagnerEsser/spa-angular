@@ -17,12 +17,11 @@ export class PokemonService {
   ) { }
 
   getPokemons(page: number = null): Observable<PokemonListOptions[]> {
-    console.log(page);
-    let limitByPage = 40;
     page--;
-    let parameters = page > 0 ? `?offset=${page * limitByPage}&limit=${limitByPage}` : `?limit=${limitByPage}`;
-    
-    this.url = this.url + parameters;
+    const limitByPage = 40;
+    const offset = page > 0 ? page * limitByPage : '';
+
+    this.url = this.url + `?offset=${offset}&limit=${limitByPage}`;
     return this.http.get<PokemonListOptions[]>(this.url);
   }
 

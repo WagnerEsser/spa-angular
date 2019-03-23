@@ -13,18 +13,22 @@ const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
   {
     path: 'home',
-    component: HomeComponent,
-    resolve: {
-      pokemonList: HomeResolver
-    },
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: HomeComponent,
+        resolve: {
+          pokemonList: HomeResolver
+        },
+      },
       {
         path: 'page/:page',
         component: HomeComponent,
         resolve: {
           pokemonList: HomeResolver
-        }
-      },  
+        },
+      },
     ]
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
