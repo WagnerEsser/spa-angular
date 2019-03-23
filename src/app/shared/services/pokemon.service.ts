@@ -16,19 +16,13 @@ export class PokemonService {
     private http: HttpClient
   ) { }
 
-  getPokemons(page: number = null): Observable<PokemonListOptions[]> {
-    console.log(page);
-    let limitByPage = 40;
-    page--;
-    let parameters = page > 0 ? `?offset=${page * limitByPage}&limit=${limitByPage}` : `?limit=${limitByPage}`;
-    
-    this.url = this.url + parameters;
+  getPokemons(): Observable<PokemonListOptions[]> {
     return this.http.get<PokemonListOptions[]>(this.url);
   }
 
   getById(id: number): Observable<PokemonOptions> {
-    this.url = this.url + id;
-    return this.http.get<PokemonOptions>(this.url);
+    const url = this.url + id;
+    return this.http.get<PokemonOptions>(url);
   }
 
   getPokemonFromUrl(url: string): Observable<PokemonOptions> {

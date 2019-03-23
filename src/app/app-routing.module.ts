@@ -16,16 +16,7 @@ const routes: Routes = [
     component: HomeComponent,
     resolve: {
       pokemonList: HomeResolver
-    },
-    children: [
-      {
-        path: 'page/:page',
-        component: HomeComponent,
-        resolve: {
-          pokemonList: HomeResolver
-        }
-      },  
-    ]
+    }
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contact', component: ContactComponent },
