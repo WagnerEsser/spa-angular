@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     FooterComponent,
     NavbarComponent,
     PaginationComponent,
+    FavoriteComponent,
+    PokemonListItemComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +38,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     FooterComponent,
     NavbarComponent,
     PaginationComponent,
+    FavoriteComponent,
+    PokemonListItemComponent
   ]
 })
 export class SharedModule { }

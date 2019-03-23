@@ -7,9 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactComponent } from './contact/contact.component';
-import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 import { SharedModule } from '../shared/shared.module';
-import { FavoriteComponent } from './favorite/favorite.component';
+import { PokemonFavoritesComponent } from './pokemon-favorites/pokemon-favorites.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
     PokemonDetailComponent,
     PageNotFoundComponent,
     ContactComponent,
-    PokemonListItemComponent,
-    FavoriteComponent
+    PokemonFavoritesComponent
   ],
   imports: [
     CommonModule,
@@ -26,13 +24,11 @@ import { FavoriteComponent } from './favorite/favorite.component';
     SharedModule,
 
     // bootstrap & font-awesome
-    AngularFontAwesomeModule,
+    AngularFontAwesomeModule
   ],
   exports: [
     HomeComponent,
-    PageNotFoundComponent,
-    PokemonListItemComponent,
-    FavoriteComponent
+    PageNotFoundComponent
   ],
 })
 export class PublicModule { }

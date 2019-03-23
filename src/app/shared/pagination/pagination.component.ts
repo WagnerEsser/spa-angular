@@ -9,8 +9,8 @@ import { PokemonListOptions } from '../options/pokemon-list.options';
 })
 export class PaginationComponent implements OnInit {
   @Input() pokemonList: PokemonListOptions;
-  private anterior = null
-  private proximo = null
+  private anterior = null;
+  private proximo = null;
 
   constructor(
     private pokemonService: PokemonService
@@ -19,12 +19,10 @@ export class PaginationComponent implements OnInit {
   ngOnInit() {
     this.pokemonService.getPokemons().subscribe(
       resposta => {
-        console.log("Pagination: ");
-        console.log(resposta);
         // this.anterior = resposta.next;
         // this.proximo = resposta.next;
       }
-    )
+    );
   }
 
 }
