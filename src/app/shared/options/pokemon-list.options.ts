@@ -4,7 +4,7 @@ export interface PokemonListOptions {
     results: PokemonListItemOptions[];
 }
 
-export interface PokemonListItemOptions{
+export interface PokemonListItemOptions {
     name: string;
     url: string;
 }
