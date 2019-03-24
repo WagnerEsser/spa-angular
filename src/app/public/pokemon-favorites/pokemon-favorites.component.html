@@ -1,3 +1,12 @@
-<p>
-  pokemon-favorites works!
-</p>
+<div class="row pt-4 pb-4" *ngIf="pokemonList.length">
+  <div *ngFor="let pokemon of pokemonList; index as i" class="col">
+    <app-pokemon-list-item [resolvedPokemon]="pokemon" [pokemonId]="pokemon.id"></app-pokemon-list-item>
+    <hr />
+  </div>
+</div>
+
+<div class="row pt-4 pb-4 app-no-pokemons" *ngIf="!pokemonList.length">
+  <div class="container-fluid">
+    <p class="alert alert-warning">Não há pokémon favoritos.</p>
+  </div>
+</div>

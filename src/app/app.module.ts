@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { PublicModule } from './public/public.module';
 import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
 import { HomeResolver } from './public/home/home.resolver';
+import { PokemonFavoritesResolver } from './public/pokemon-favorites/pokemon-favorites.resolver';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeResolver } from './public/home/home.resolver';
   ],
   providers: [
     HomeResolver,
-    PokemonDetailResolver
+    PokemonDetailResolver,
+    PokemonFavoritesResolver
   ],
   bootstrap: [AppComponent]
 })

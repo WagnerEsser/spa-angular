@@ -9,6 +9,7 @@ import { ContactComponent } from './public/contact/contact.component';
 import { PokemonDetailResolver } from './public/pokemon-detail/pokemon-detail.resolver';
 import { HomeResolver } from './public/home/home.resolver';
 import { PokemonFavoritesComponent } from './public/pokemon-favorites/pokemon-favorites.component';
+import { PokemonFavoritesResolver } from './public/pokemon-favorites/pokemon-favorites.resolver';
 
 const routes: Routes = [
   { path: '404', component: PageNotFoundComponent },
@@ -30,7 +31,10 @@ const routes: Routes = [
   },
   {
     path: 'favorites',
-    component: PokemonFavoritesComponent
+    component: PokemonFavoritesComponent,
+    resolve: {
+      pokemonList: PokemonFavoritesResolver
+    }
   },
   { path: '**', redirectTo: '404' }
 ];

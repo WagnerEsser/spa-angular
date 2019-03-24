@@ -13,14 +13,20 @@ export class PokemonListItemComponent implements OnInit {
   resolvedData: PokemonOptions;
   @Input() pokemon: PokemonListItemOptions;
   @Input() pokemonId: number;
+  @Input() resolvedPokemon: PokemonOptions;
 
   constructor(
     private pokemonService: PokemonService
   ) { }
 
   ngOnInit() {
-    this.pokemonService.getPokemonFromUrl(this.pokemon.url).subscribe(
-      value => this.resolvedData = value
-    );
+    if (this.resolvedPokemon) {  // se veio pokémon pronto
+      this.resolvedData = this.resolvedPokemon;
+    }
+    if (this.pokemon) {  // se veio da lista principal e precisa ser resolvida
+      this.pokemonService.getPokemonFromUrl(this.pokemon.url).subscribe(
+        value => this.resolvedData = value
+      );
+    }
   }
 }
