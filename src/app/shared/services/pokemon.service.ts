@@ -19,7 +19,12 @@ export class PokemonService {
     private storageService: PokemonStorageService
   ) { }
 
-  getPokemons(): Observable<PokemonListOptions[]> {
+  getPokemons(page: number = null): Observable<PokemonListOptions[]> {
+    page--;
+    const limitByPage = 40;
+    const offset = page > 0 ? page * limitByPage : '';
+
+    this.url = this.url + `?offset=${offset}&limit=${limitByPage}`;
     return this.http.get<PokemonListOptions[]>(this.url);
   }
 

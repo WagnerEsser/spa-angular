@@ -15,7 +15,11 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.pokemonList = this.router.snapshot.data.pokemonList;
-  }
+    this.router.data.subscribe(data => this.pokemonList = data.pokemonList);
 
+    // tslint:disable-next-line:radix
+    const page = parseInt(this.router.snapshot.params.page);
+    this.pagination.nextPage = page >= 2 ? page + 1 : 2;
+    this.pagination.previousPage = page >= 2 ? page - 1 : 0;
+  }
 }

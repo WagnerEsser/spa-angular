@@ -1,3 +1,16 @@
-<p>
-  pagination works!
-</p>
+<nav aria-label="Page navigation example" class="mb-5">
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{'disabled': !previousPage}">
+      <a class="page-link" [routerLink]="['/home/page', previousPage]">
+        <span aria-hidden="true">&laquo;</span>
+        Anterior
+      </a>
+    </li>
+    <li class="page-item" [ngClass]="{'disabled': !nextPage}">
+      <a class="page-link" [routerLink]="['/home/page', nextPage]">
+        Próxima
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
