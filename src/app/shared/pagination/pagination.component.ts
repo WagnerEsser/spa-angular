@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PokemonService } from '../services/pokemon.service';
-import { PokemonListOptions } from '../options/pokemon-list.options';
 
 @Component({
   selector: 'app-pagination',
@@ -8,21 +6,12 @@ import { PokemonListOptions } from '../options/pokemon-list.options';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  @Input() pokemonList: PokemonListOptions;
-  private anterior = null;
-  private proximo = null;
+  @Input() previousPage: number;
+  @Input() currentPage: number;
+  @Input() nextPage: number;
 
-  constructor(
-    private pokemonService: PokemonService
-  ) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.pokemonService.getPokemons().subscribe(
-      resposta => {
-        // this.anterior = resposta.next;
-        // this.proximo = resposta.next;
-      }
-    );
-  }
+  ngOnInit() { }
 
 }
