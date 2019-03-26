@@ -1,13 +1,18 @@
 <nav aria-label="Page navigation example" class="mb-5">
   <ul class="pagination">
     <li class="page-item" [ngClass]="{'disabled': !previousPage}">
-      <a class="page-link" [routerLink]="['/home/page', previousPage]">
+      <a class="page-link" [routerLink]="['/home']" [queryParams]="{page: previousPage}">
         <span aria-hidden="true">&laquo;</span>
         Anterior
       </a>
     </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="">
+        {{ currentPage }}
+      </a>
+    </li>
     <li class="page-item" [ngClass]="{'disabled': !nextPage}">
-      <a class="page-link" [routerLink]="['/home/page', nextPage]">
+      <a class="page-link" [routerLink]="['/home']" [queryParams]="{page: nextPage}">
         Próxima
         <span aria-hidden="true">&raquo;</span>
       </a>

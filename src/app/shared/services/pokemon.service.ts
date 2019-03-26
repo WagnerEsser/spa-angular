@@ -24,13 +24,13 @@ export class PokemonService {
     const limitByPage = 40;
     const offset = page > 0 ? page * limitByPage : '';
 
-    this.url = this.url + `?offset=${offset}&limit=${limitByPage}`;
-    return this.http.get<PokemonListOptions[]>(this.url);
+    const newUrl = this.url + `?offset=${offset}&limit=${limitByPage}`;
+    return this.http.get<PokemonListOptions[]>(newUrl);
   }
 
   getById(id: number): Observable<PokemonOptions> {
-    const url = this.url + id;
-    return this.http.get<PokemonOptions>(url);
+    const newUrl = this.url + id;
+    return this.http.get<PokemonOptions>(newUrl);
   }
 
   getPokemonFromUrl(url: string): Observable<PokemonOptions> {
