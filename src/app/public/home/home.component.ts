@@ -51,5 +51,10 @@ export class HomeComponent implements OnInit {
     this.currentPage = page > 0 ? page : 1;
     this.nextPage = page >= 2 ? page + 1 : 2;
     this.previousPage = page >= 2 ? page - 1 : 0;
+
+    // para última página (refatorar p/ tornar dinâmica)
+    if (this.currentPage === 25) {
+      this.nextPage = 0;
+    }
   }
 }

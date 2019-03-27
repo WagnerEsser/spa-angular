@@ -1,16 +1,16 @@
 <div class="app-pokemon-item-list mx-auto text-center">
 
-  <app-favorite [pokemonId]="pokemonId"></app-favorite>
+  <app-favorite [pokemonId]="resolvedData.id"></app-favorite>
   
   <div class="col">
-    <a [routerLink]="['/pokemon', pokemonId]" class="app-link">
+    <a [routerLink]="['/pokemon', resolvedData?.id]" class="app-link">
       <fa *ngIf="!resolvedData?.sprites?.front_default" name="spinner fa-4x mb-4 fa-spin" class="text-muted"></fa>
       <img *ngIf="resolvedData?.sprites?.front_default" [src]="resolvedData.sprites.front_default"
         class="rounded app-pokemon-photo mb-1" alt="{{ resolvedData.name }}" />
     </a>
   </div>
 
-  <a [routerLink]="['/pokemon', pokemonId]" class="app-link">
+  <a [routerLink]="['/pokemon', resolvedData?.id]" class="app-link">
     <div class="col app-pokemon-description">
       <span class="text-muted app-text-pokemon-id"># {{ resolvedData?.id }}</span>
       <h4 class="app-title-pokemon">{{ resolvedData?.name | titlecase }}</h4>
